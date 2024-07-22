@@ -1,6 +1,6 @@
 import requests
 
-def get_top_charts(term='top', country='US', limit=10):
+def get_top_charts(term='music', country='US', limit=10):
     url = 'https://itunes.apple.com/search'
     params = {
         'term': term,
