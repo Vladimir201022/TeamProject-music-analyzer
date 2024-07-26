@@ -1,0 +1,96 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте - Музыкальный анализатор</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+
+<body>
+    <header class="bg-dark py-2 fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo d-flex align-items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvWVyqAGgbWCLumXg_cthZMNUnGrGWFNrgXg&s"
+                    alt="Лого" height="30" class="me-2">
+                <h2 class="text-white m-0">Музыкальный анализатор</h2>
+            </div>
+            <div class="nav-buttons d-none d-md-flex">
+                <a href="{% url 'index' %}" class="btn btn-sm btn-light mx-2">Главная</a>
+                <a href="{% url 'about' %}" class="btn btn-sm btn-light mx-2">О проекте</a>
+            </div>
+            <button class="navbar-toggler d-md-none" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu d-md-none">
+        <a href="index.html" class="btn btn-sm btn-light btn-block">Главная</a>
+        <a href="about.html" class="btn btn-sm btn-light btn-block">О проекте</a>
+    </div>
+
+    <main class="container content mt-5">
+        <div class="about-content">
+            <h1 class="text-center mb-4">Проект "Музыкальный Анализатор"</h1>
+            <section>
+                <h2>Описание проекта</h2>
+                <p>"Музыкальный Анализатор" - это инновационная платформа, предназначенная для анализа и отображения
+                    текущих музыкальных трендов. Наш проект предоставляет пользователям возможность узнавать самые
+                    популярные песни в данный момент и знакомиться с хитами дня. Платформа собирает данные из различных
+                    источников, таких как стриминговые сервисы, социальные сети и музыкальные чарты, чтобы предложить
+                    наиболее актуальную и объективную информацию о мире музыки.</p>
+            </section>
+            <section>
+                <h2>Основные функции</h2>
+                <ul>
+                    <li><strong>Популярные песни в реальном времени:</strong> Платформа отображает список самых
+                        популярных песен, которые в настоящий момент занимают верхние строчки чартов. Обновление данных
+                        происходит в реальном времени, что позволяет пользователям всегда быть в курсе последних
+                        музыкальных трендов.</li>
+                    <li><strong>Песни дня:</strong> Каждый день сервис формирует список песен, которые наиболее активно
+                        прослушивались и обсуждались за последние 24 часа. Пользователи могут открывать для себя новые
+                        треки и артистов, ориентируясь на актуальные ежедневные рекомендации.</li>
+                    <li><strong>Аналитика и статистика:</strong> Подробная статистика по каждой песне: количество
+                        прослушиваний, количество упоминаний в социальных сетях, динамика популярности. Сравнение
+                        текущих данных с предыдущими периодами для выявления трендов и изменений в предпочтениях
+                        аудитории.</li>
+                    <li><strong>Интерфейс пользователя:</strong> Удобный и интуитивно понятный интерфейс позволяет легко
+                        находить нужную информацию и навигацию по разделам. Возможность персонализации: пользователи
+                        могут создавать собственные плейлисты на основе рекомендуемых песен.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Преимущества</h2>
+                <ul>
+                    <li><strong>Актуальность:</strong> всегда свежая информация о музыкальных трендах.</li>
+                    <li><strong>Доступность:</strong> возможность использования на различных устройствах (мобильные
+                        телефоны, планшеты, компьютеры).</li>
+                    <li><strong>Интерактивность:</strong> возможность делиться своими любимыми треками и плейлистами с
+                        друзьями.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Заключение</h2>
+                <p>Проект "Музыкальный Анализатор" - это ваш проводник в мир современной музыки. С нашей платформой вы
+                    всегда будете в курсе самых горячих музыкальных новинок и сможете наслаждаться самыми популярными
+                    треками, где бы вы ни находились. Присоединяйтесь к нашему сообществу и погружайтесь в мир музыки
+                    вместе с нами!</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            &copy; Музыкальный анализатор
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{%static 'scripts.js'%}"></script>
+</body>
+
+</html>

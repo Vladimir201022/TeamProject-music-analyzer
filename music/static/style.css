@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    background-image: url('background.jpeg');
+    background-size: cover;
+    animation: slidein 100s infinite alternate forwards;
+    color: #fff;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+.bg-dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #343a40;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-family: 'Rubik Mono One', sans-serif;
+    color: #343a40;
+}
+
+.btn-primary {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-primary:hover {
+    background-color: #495057;
+    border-color: #495057;
+}
+
+header {
+    padding: 10px 0;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+footer {
+    padding: 10px 0;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.card-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    header {
+        padding: 5px 0;
+    }
+
+    .logo h2 {
+        font-size: 1.25rem;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+}
+
+.content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-buttons .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28%255%2C%255%2C255%2C1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.mobile-menu .btn {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.about-content, .artists-content, .daysongs-content, .genres-content, .trends-content {
+    font-size: 0.875rem;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    height: calc(100vh - 145px);
+}
+
+.about-content ul, .about-content h2 {
+    font-size: 0.875rem;
+}
+
+.nav-buttons a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-buttons a:hover {
+    background-color: #495057;
+}
